@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    position: relative; /* Position relative for absolute positioning of video */
+    overflow: hidden; /* Ensures no overflow from the video */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Places the video behind the content */
+    transform: translate(-50%, -50%);
+}
+
+.hero-content {
+    position: relative; /* Ensures the content is above the video */
+    z-index: 1; /* Places the content above the video */
+}
+
+
+
+.hero-btn {
+    margin-top: 50px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .portfolio, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.portfolio-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    max-width: 400px; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact button {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
